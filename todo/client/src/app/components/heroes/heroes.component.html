@@ -1,0 +1,19 @@
+<h2>What's next?</h2>
+<div>
+<h3>Add Task: <input [(ngModel)]="newHero" placeholder="Task"><button (click)="addHero(newHero)">Add</button></h3>
+</div>
+<div>
+  <label>Show Hidden Taks 👀: <input type="checkbox" [(ngModel)]="showHidden"></label>
+</div>
+<ul class="heroes">
+  <ng-container *ngFor="let hero of heroes" >
+  <li  *ngIf='!hero.hidden || showHidden' class="hero">
+      <span (click)="hide(hero)" class="badge">
+        <button class='deleteButton'>
+        </button>X</span>
+    <a routerLink="/detail/{{hero.id}}">{{hero.name}}  </a>
+    <button (click)="deleteHero(hero)" class="deleteButton">✔</button>
+  </li>
+</ng-container>
+</ul>
+<br>

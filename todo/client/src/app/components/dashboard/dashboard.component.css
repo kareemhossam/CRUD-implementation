@@ -1,0 +1,31 @@
+a{
+  display: inline-grid;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin: 10px 10px;
+  background: rgba(230,230,230,0.6);
+  border-color: rgba(240,240,240,0.9);
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: black;
+}
+
+.hero{
+  padding: 10px 10px;
+  color: inherit;
+  border-radius: 4px;
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hero:hover{
+  font-weight: bold;
+  margin-top: 20px;
+
+  margin-left: 5px;
+}
+a:hover{
+  background: rgba(230,230,230,0.8);
+}
+li{
+  display: inline-grid;
+}

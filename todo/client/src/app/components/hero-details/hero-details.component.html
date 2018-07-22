@@ -1,0 +1,17 @@
+<div *ngIf='hero' class='heroes'>
+  <h2>{{hero.name}} Details</h2>
+  <div><span class="heroes">ID: </span>{{hero.id}}</div>
+  <div class='edit' style="padding-right:0px; display:inline;">
+    <label class="hero" style="background:inherit;">Name:
+      <input [(ngModel)]="hero.name" placeholder="name" class='heroes'>
+    </label>
+    <br>
+    <label> Hide:
+    <input type='checkbox' [(ngModel)]="hero.hidden">
+  </label>
+  <br>
+    <button (click)="updateHero()" class='backButton'>Update</button>
+  </div>
+</div>
+<br>
+<button (click)="goBack()" class="backButton">Go Back</button>

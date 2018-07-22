@@ -1,0 +1,7 @@
+<h1 style ='font-size:24px; margin-top:20px;'>Urgent Tasks</h1>
+<div>
+  <a *ngFor='let hero of topHeroes' routerLink="/detail/{{hero.id}}">
+    <h3 class="hero">{{hero.name}}</h3>
+  </a>
+</div>
+<app-hero-search></app-hero-search>
