@@ -12,6 +12,10 @@
     },
     "description": {
       "type": "string"
+    },
+    "hidden": {
+      "type": "boolean",
+      "default": "false"
     }
   },
   "validations": [],
