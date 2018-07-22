@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Hero } from '../ts/hero';
-import { HEROES } from '../ts/mock-heroes';
+// import { HEROES } from '../ts/mock-heroes';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -68,7 +68,7 @@ export class HeroService {
   if (!name.trim()) {
     return of([]);
   }
-  return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${name}`).pipe(
+  return this.http.get<Hero[]>(`${this.heroesUrl}/?filter[where][name][regexp]=.*${name}.`).pipe(
     tap(_ => this.messageService.add(`found tasks matching "${name}"`)),
     catchError(this.handleError<Hero[]>('searchHeroes', []))
   );

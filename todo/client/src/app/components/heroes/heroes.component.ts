@@ -33,7 +33,8 @@ export class HeroesComponent implements OnInit {
      return;
     let hero={
        id:this.id,
-       name:name
+       name:name,
+       hidden:false
      };
     this.heroService.addHero(hero)
     .subscribe(hero => {
