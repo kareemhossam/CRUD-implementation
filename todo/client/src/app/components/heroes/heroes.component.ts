@@ -32,7 +32,6 @@ export class HeroesComponent implements OnInit {
     if (!name)
      return;
     let hero={
-       id:this.id,
        name:name,
        hidden:false
      };

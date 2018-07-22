@@ -33,7 +33,7 @@ export class HeroService {
   );
 }
 
-  updateHero(hero:Hero){
+  updateHero(hero){
   const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -43,7 +43,7 @@ export class HeroService {
   );
 }
 
-  addHero(hero:Hero){
+  addHero(hero){
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
